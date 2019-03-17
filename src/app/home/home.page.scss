@@ -1,1 +1,22 @@
+:host {
+    background: url('../../assets/images/map.jpg') no-repeat 0 0;
+    background-size: cover;
+    ion-header {
+        backdrop-filter: none;
+        ion-toolbar {
+            --color: #fff;
+            --border-width: 0;
+            --background: #58B1FB;
+            opacity: .6;
+        }
+    }
+    ion-content {
+        --color: #000;
+        --background: none;
+    }
 
+    ion-text {
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+}

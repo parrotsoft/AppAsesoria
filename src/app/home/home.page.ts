@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  constructor() {
+
+  }
+
+  onOpenPage(option: number) {
+    
+  }
+
 }

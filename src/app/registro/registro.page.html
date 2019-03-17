@@ -1,0 +1,75 @@
+<ion-header >
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button text="Inicio" defaultHref="home"></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+          Registro
+        </ion-title>
+    </ion-toolbar>
+
+  </ion-header>
+  
+  <ion-content fullscreen>
+    
+    <ion-grid>
+      
+      <ion-row>
+        <ion-col>
+          <ion-img src="../../assets/images/enmascarar_grupo_6.png"></ion-img>
+        </ion-col>  
+      </ion-row>
+  
+      <ion-row>
+        <ion-col>
+          
+          <ion-item>
+            <ion-input placeholder="Nombre"></ion-input>
+          </ion-item>
+  
+          <ion-item>
+            <ion-input placeholder="Telefono"></ion-input>
+          </ion-item>
+  
+          <ion-item>
+            <ion-input type="email" placeholder="Correo electronico"></ion-input>
+          </ion-item>
+  
+        </ion-col>
+      </ion-row>
+  
+      <ion-row text-center>
+        <ion-col>
+          <ion-button expand="block" [routerLink]="['/main']">Registrar</ion-button>
+        </ion-col>
+      </ion-row>
+  
+      <ion-row text-center>
+        <ion-col>
+          ò
+        </ion-col>
+      </ion-row>
+  
+      <ion-row text-center>
+          <ion-col col-4>
+            <ion-button fill="clear">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </ion-button>
+          </ion-col>
+          <ion-col col-4>
+              <ion-button fill="clear">
+                  <ion-icon name="logo-twitter"></ion-icon>
+              </ion-button>
+            </ion-col>
+            <ion-col col-4>
+                <ion-button fill="clear">
+                    <ion-icon name="logo-googleplus"></ion-icon>
+                </ion-button>
+              </ion-col>
+        </ion-row>
+  
+  
+    </ion-grid>
+  
+  </ion-content>
+  
