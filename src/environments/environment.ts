@@ -3,9 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  parse_app_id: 'EuFQw7E1yYJd2MkEsLcZiOZrLQZh8sFUZjSolFAF',
+  parse_server_url: 'https://parseapi.back4app.com/',
+  parse_js_key: '03YfHaJNRoysvjoQWFfgJyU34DbyhcfqMk33zmnI'
 };
-
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

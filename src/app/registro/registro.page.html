@@ -24,52 +24,29 @@
         <ion-col>
           
           <ion-item>
-            <ion-input placeholder="Nombre"></ion-input>
+              <ion-label position="floating">Nombre</ion-label>
+            <ion-input></ion-input>
           </ion-item>
   
           <ion-item>
-            <ion-input placeholder="Telefono"></ion-input>
+              <ion-label position="floating">Telefono</ion-label>
+            <ion-input></ion-input>
           </ion-item>
   
           <ion-item>
-            <ion-input type="email" placeholder="Correo electronico"></ion-input>
+              <ion-label position="floating">Correo electronico</ion-label>
+            <ion-input type="email"></ion-input>
           </ion-item>
   
         </ion-col>
       </ion-row>
   
-      <ion-row text-center>
+      <ion-row>
         <ion-col>
-          <ion-button expand="block" [routerLink]="['/main']">Registrar</ion-button>
+          <ion-button expand="block" shape="round"  [routerLink]="['/main']">Registrar</ion-button>
         </ion-col>
       </ion-row>
-  
-      <ion-row text-center>
-        <ion-col>
-          ò
-        </ion-col>
-      </ion-row>
-  
-      <ion-row text-center>
-          <ion-col col-4>
-            <ion-button fill="clear">
-                <ion-icon name="logo-facebook"></ion-icon>
-            </ion-button>
-          </ion-col>
-          <ion-col col-4>
-              <ion-button fill="clear">
-                  <ion-icon name="logo-twitter"></ion-icon>
-              </ion-button>
-            </ion-col>
-            <ion-col col-4>
-                <ion-button fill="clear">
-                    <ion-icon name="logo-googleplus"></ion-icon>
-                </ion-button>
-              </ion-col>
-        </ion-row>
-  
-  
+
     </ion-grid>
   
   </ion-content>
-  

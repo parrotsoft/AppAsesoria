@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { RegistroPage } from './registro/registro.page';
 import { PrincipalPagePageModule } from './principal-page/principal-page.module';
 import { PrincipalPagePage } from './principal-page/principal-page.page';
+import { Facebook } from "@ionic-native/facebook/ngx";
 
 @NgModule({
   declarations: [AppComponent],
@@ -35,6 +36,7 @@ import { PrincipalPagePage } from './principal-page/principal-page.page';
   providers: [
     StatusBar,
     SplashScreen,
+    Facebook,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent],
