@@ -90,4 +90,5 @@
         <variable name="FACEBOOK_HYBRID_APP_EVENTS" value="false" />
         <variable name="FACEBOOK_ANDROID_SDK_VERSION" value="4.40.0" />
     </plugin>
+    <plugin name="cordova-plugin-nativestorage" spec="2.3.2" />
 </widget>
