@@ -15,6 +15,7 @@ import { RegistroPage } from './registro/registro.page';
 import { PrincipalPagePageModule } from './principal-page/principal-page.module';
 import { PrincipalPagePage } from './principal-page/principal-page.page';
 import { Facebook } from "@ionic-native/facebook/ngx";
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,6 +27,7 @@ import { Facebook } from "@ionic-native/facebook/ngx";
     HomePageModule,
     RegistroPageModule,
     PrincipalPagePageModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: HomePage },
       { path: 'registro', component: RegistroPage },

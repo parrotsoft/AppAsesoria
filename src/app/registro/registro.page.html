@@ -1,7 +1,7 @@
 <ion-header >
     <ion-toolbar>
       <ion-buttons slot="start">
-        <ion-back-button text="Inicio" defaultHref="home"></ion-back-button>
+        <ion-back-button defaultHref="home"></ion-back-button>
       </ion-buttons>
       <ion-title>
           Registro
@@ -16,34 +16,36 @@
       
       <ion-row>
         <ion-col>
-          <ion-img src="../../assets/images/enmascarar_grupo_6.png"></ion-img>
+          <ion-img src="../../assets/images/like.png" style="width: 100px; margin: auto; margin-top: 1em;"></ion-img>
         </ion-col>  
       </ion-row>
-  
-      <ion-row>
+
+      <form [formGroup]="formRegistro">
+        <ion-row padding>
         <ion-col>
           
           <ion-item>
-              <ion-label position="floating">Nombre</ion-label>
-            <ion-input></ion-input>
+            <ion-label position="floating"><ion-icon name="person"></ion-icon> Nombre</ion-label>
+            <ion-input formControlName="nombre"></ion-input>
           </ion-item>
   
           <ion-item>
-              <ion-label position="floating">Telefono</ion-label>
-            <ion-input></ion-input>
+            <ion-label position="floating"><ion-icon name="call"></ion-icon> Telefono</ion-label>
+            <ion-input type="tel" formControlName="telefono"></ion-input>
           </ion-item>
   
           <ion-item>
-              <ion-label position="floating">Correo electronico</ion-label>
-            <ion-input type="email"></ion-input>
+              <ion-label position="floating"><ion-icon name="send"></ion-icon> Correo</ion-label>
+            <ion-input type="email" formControlName="correo"></ion-input>
           </ion-item>
   
         </ion-col>
       </ion-row>
-  
+      </form>
+
       <ion-row>
         <ion-col>
-          <ion-button expand="block" shape="round"  [routerLink]="['/main']">Registrar</ion-button>
+          <ion-button expand="block" shape="round"  (click)="onRegister()" [disabled]="!formRegistro.valid">Registrar</ion-button>
         </ion-col>
       </ion-row>
 
