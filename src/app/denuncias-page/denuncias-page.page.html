@@ -1,12 +1,31 @@
 <ion-header>
   <ion-toolbar>
-      <ion-buttons slot="start">
-          <ion-back-button defaultHref="/tabs/principal"></ion-back-button>
-        </ion-buttons>
-    <ion-title>Denuncias</ion-title>
+      <ion-buttons slot="secondary">
+          <ion-button (click)="getMisDenuncias()">
+              <ion-icon slot="icon-only" name="refresh"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+    <ion-title text-center>Mis Denuncias</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+    <ion-card *ngFor="let row of misDenuncias">
+        <ion-card-header>
+            <ion-card-subtitle>{{row.get('tipo')}}</ion-card-subtitle>
+            <ion-card-title>{{row.get('direccion')}}</ion-card-title>
+        </ion-card-header>
 
+        <ion-card-content>
+            {{row.get('descripcion')}}
+        </ion-card-content>
+        <div *ngIf="row.get('archivo')">
+            <ion-button (click)="onAbreAcrhivo(row.get('archivo'))">
+                <ion-icon name="attach"></ion-icon>
+            </ion-button>
+        </div>
+    </ion-card>
+    <!--<ion-item *ngFor="let row of misDenuncias">
+        <ion-label>{{ row.get('descripcion')}}</ion-label>
+    </ion-item> -->
 </ion-content>

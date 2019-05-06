@@ -1,12 +1,44 @@
 <ion-header>
-  <ion-toolbar>
-      <ion-buttons slot="start">
-          <ion-back-button defaultHref="/tabs/principal"></ion-back-button>
-        </ion-buttons>
-    <ion-title>Perfil</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title text-center>Perfil</ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content *ngIf="currentUser">
+    <div class="user-photo" padding-top>
+        <ion-avatar>
+            <img [src]="currentUser.get('picture') || '../../../assets/images/avatar.svg'">
+        </ion-avatar>
+    </div>
+
+    <ion-list>
+        <ion-item>
+            <ion-icon name="person" slot="start"></ion-icon>
+            <ion-label>
+                <p>Nombre</p>
+                <h2>{{currentUser.get('username')}}</h2>
+            </ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="mail" slot="start"></ion-icon>
+            <ion-label>
+                <p>Correo</p>
+                <h2>{{currentUser.get('email')}}</h2>
+            </ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="call" slot="start"></ion-icon>
+            <ion-label>
+                <p>Telefono</p>
+                <h2>{{currentUser.get('phone')}}</h2>
+            </ion-label>
+        </ion-item>
+
+        <ion-row text-center>
+            <ion-col>
+                <ion-button (click)="onLogOut()">Cerrar Sesión</ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-list>
 
 </ion-content>

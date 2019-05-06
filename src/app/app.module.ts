@@ -16,6 +16,9 @@ import { PrincipalPagePageModule } from './principal-page/principal-page.module'
 import { PrincipalPagePage } from './principal-page/principal-page.page';
 import { Facebook } from "@ionic-native/facebook/ngx";
 import { ReactiveFormsModule } from "@angular/forms";
+import { FileChooser } from '@ionic-native/file-chooser/ngx';
+import { Base64 } from '@ionic-native/base64/ngx';
+import { FilePath } from '@ionic-native/file-path/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -39,6 +42,9 @@ import { ReactiveFormsModule } from "@angular/forms";
     StatusBar,
     SplashScreen,
     Facebook,
+    FileChooser,
+    Base64,
+    FilePath,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent],

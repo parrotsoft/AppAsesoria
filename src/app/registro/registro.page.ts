@@ -42,7 +42,7 @@ export class RegistroPage implements OnInit {
         message: 'Cargando...'
       }).then( loading => {
         loading.present();
-        new Parse.User().save(this.formRegistro.value).then( user => {
+        new Parse.User().signUp(this.formRegistro.value).then( user => {
           loading.dismiss();
           this.nav.navigateRoot('main');
           // alert(user.get('username'));

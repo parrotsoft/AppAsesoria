@@ -20,11 +20,12 @@
         </ion-row>
 
         <ion-grid style="background-color: #FFFFFF; border-radius: 12px;   box-shadow: 2px 2px 5px #999;" margin >
+            <form [formGroup]="formLogin">
             <ion-row>
                 <ion-col>
                     <ion-item>
                         <ion-label position="floating"><ion-icon name="contact"></ion-icon> Usuario</ion-label>
-                        <ion-input clearInput type="text"></ion-input>
+                        <ion-input clearInput type="text" formControlName="username"></ion-input>
                     </ion-item>
                 </ion-col>
             </ion-row>
@@ -32,15 +33,16 @@
                 <ion-col>
                     <ion-item>
                         <ion-label position="floating"><ion-icon name="key"></ion-icon> Clave</ion-label>
-                        <ion-input clearInput type="password"></ion-input>
+                        <ion-input clearInput type="password" formControlName="password"></ion-input>
                     </ion-item>
                 </ion-col>
             </ion-row>
             <ion-row>
                 <ion-col>
-                    <ion-button expand="full" shape="round">Inicia Sesión</ion-button>
+                    <ion-button expand="full" shape="round" [disabled]="formLogin.invalid" (click)="onEnter()">Inicia Sesión</ion-button>
                 </ion-col>
             </ion-row>
+            </form>
         </ion-grid>
 
         <ion-grid>
@@ -53,7 +55,7 @@
 
         <ion-row margin style="margin-top: -1em;">
             <ion-col size="6">
-                <ion-button shape="round" expand="full" [routerLink]="['/main']">Anonimo</ion-button>
+                <ion-button shape="round" expand="full" (click)="onEnterAnonimo()">Anonimo</ion-button>
             </ion-col>
             <ion-col size="6">
                 <ion-button shape="round" expand="full" [routerLink]="['/registro']">Registrate</ion-button>
@@ -62,7 +64,7 @@
 
         <ion-row margin>
             <ion-col size="12">
-                <ion-button expand="full" shape="round"  class="btn-facebook">
+                <ion-button expand="full" shape="round"  class="btn-facebook" (click)="loginOnFacebook()">
                     <ion-icon name="logo-facebook"></ion-icon>
                     Facebook
                 </ion-button>
