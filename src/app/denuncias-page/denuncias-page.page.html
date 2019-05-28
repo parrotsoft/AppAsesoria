@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
       <ion-buttons slot="secondary">
           <ion-button (click)="getMisDenuncias()">
               <ion-icon slot="icon-only" name="refresh"></ion-icon>
@@ -12,16 +12,19 @@
 <ion-content padding>
     <ion-card *ngFor="let row of misDenuncias">
         <ion-card-header>
-            <ion-card-subtitle>{{row.get('tipo')}}</ion-card-subtitle>
-            <ion-card-title>{{row.get('direccion')}}</ion-card-title>
+            <ion-card-subtitle color="primary" style="font-size: 1.4em;">{{row.get('tipo')}}</ion-card-subtitle>
+            <ion-card-title style="font-size: 1em; font-weight: 200;">{{row.get('direccion')}}</ion-card-title>
         </ion-card-header>
 
         <ion-card-content>
             {{row.get('descripcion')}}
         </ion-card-content>
-        <div *ngIf="row.get('archivo')">
+        <div *ngIf="row.get('archivo')" style="width: 100%; text-align: right; padding-right: 1em; padding-bottom: 1em;">
             <ion-button (click)="onAbreAcrhivo(row.get('archivo'))">
                 <ion-icon name="attach"></ion-icon>
+            </ion-button>
+            <ion-button color="warning">
+                <ion-icon name="chatbubbles"></ion-icon>
             </ion-button>
         </div>
     </ion-card>

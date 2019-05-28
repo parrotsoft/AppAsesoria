@@ -1,30 +1,33 @@
 <ion-header translucent="true" no-border>
-    <ion-toolbar>
+    <!--<ion-toolbar>
         <ion-title text-center>
             INICIO
         </ion-title>
     </ion-toolbar>
-</ion-header>
+</ion-header>-->
 
 <ion-content fullscreen="true" class="bg-image">
 
     <ion-grid>
         <ion-row>
-            <ion-col>
-                <ion-text>
-                    Joven,<br>
-                    Estamos disponibles<br>
-                    Para ayudarte...
-                </ion-text>
+            <ion-col text-center>
+                <img src="../../assets/images/logo.png" alt="" class="logo">
             </ion-col>
         </ion-row>
 
         <ion-grid style="background-color: #FFFFFF; border-radius: 12px;   box-shadow: 2px 2px 5px #999;" margin >
+            <ion-row>
+                <ion-col>
+                    <ion-text class="titulo">
+                        <span>Joven</span> Estamos disponible para ayudate...
+                    </ion-text>
+                </ion-col>
+            </ion-row>
             <form [formGroup]="formLogin">
             <ion-row>
                 <ion-col>
                     <ion-item>
-                        <ion-label position="floating"><ion-icon name="contact"></ion-icon> Usuario</ion-label>
+                        <ion-label position="floating"><ion-icon name="contact"></ion-icon> USUARIO</ion-label>
                         <ion-input clearInput type="text" formControlName="username"></ion-input>
                     </ion-item>
                 </ion-col>
@@ -32,33 +35,35 @@
             <ion-row>
                 <ion-col>
                     <ion-item>
-                        <ion-label position="floating"><ion-icon name="key"></ion-icon> Clave</ion-label>
+                        <ion-label position="floating"><ion-icon name="key"></ion-icon> CLAVE</ion-label>
                         <ion-input clearInput type="password" formControlName="password"></ion-input>
                     </ion-item>
                 </ion-col>
             </ion-row>
             <ion-row>
                 <ion-col>
-                    <ion-button expand="full" shape="round" [disabled]="formLogin.invalid" (click)="onEnter()">Inicia Sesión</ion-button>
+                    <ion-button class="btn-inicion" expand="full" shape="round" [disabled]="formLogin.invalid" (click)="onEnter()">
+                        Inicia Sesión   <ion-icon name="arrow-forward"></ion-icon>
+                    </ion-button>
                 </ion-col>
             </ion-row>
             </form>
         </ion-grid>
 
-        <ion-grid>
+        <!--<ion-grid>
             <ion-row>
                 <ion-col text-center>
                     <ion-label>Ó</ion-label>
                 </ion-col>
             </ion-row>
-        </ion-grid>
+        </ion-grid>-->
 
-        <ion-row margin style="margin-top: -1em;">
+        <ion-row margin style="margin-top: 1em;">
             <ion-col size="6">
-                <ion-button shape="round" expand="full" (click)="onEnterAnonimo()">Anonimo</ion-button>
+                <ion-button class="btn-facebook" shape="round" expand="full" (click)="onEnterAnonimo()">Anonimo</ion-button>
             </ion-col>
             <ion-col size="6">
-                <ion-button shape="round" expand="full" [routerLink]="['/registro']">Registrate</ion-button>
+                <ion-button class="btn-facebook" shape="round" expand="full" [routerLink]="['/registro']">Registrate</ion-button>
             </ion-col>
         </ion-row>
 

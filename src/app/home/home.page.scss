@@ -1,5 +1,5 @@
 :host {
-    background: url('../../assets/images/map.jpg') no-repeat 0 0;
+    background: url('../../assets/images/fondo.png') no-repeat 0 0;
     background-size: cover;
     ion-header {
         backdrop-filter: none;
@@ -21,6 +21,26 @@
     }
 
     .btn-facebook {
+        --background: #347cff;
+    }
 
+    .btn-inicio {
+        --background: #00cae6;
+    }
+
+    .logo {
+        margin-top: 2em;
+        width: 25%;
+    }
+    
+    .titulo { 
+        text-align: center;
+        font-size: 1.2em;
+        font-weight: 200;
+        color: #000000;
+    }
+
+    .titulo span {
+        font-weight: 500;
     }
 }
