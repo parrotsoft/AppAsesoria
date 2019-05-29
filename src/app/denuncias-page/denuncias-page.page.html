@@ -19,12 +19,12 @@
         <ion-card-content>
             {{row.get('descripcion')}}
         </ion-card-content>
-        <div *ngIf="row.get('archivo')" style="width: 100%; text-align: right; padding-right: 1em; padding-bottom: 1em;">
-            <ion-button (click)="onAbreAcrhivo(row.get('archivo'))">
+        <div  style="width: 100%; text-align: right; padding-right: 1em; padding-bottom: 1em;">
+            <ion-button *ngIf="row.get('archivo')" (click)="onAbreAcrhivo(row.get('archivo'))">
                 <ion-icon name="attach"></ion-icon>
             </ion-button>
-            <ion-button color="warning">
-                <ion-icon name="chatbubbles"></ion-icon>
+            <ion-button color="warning" (click)="onOpenChat(row.id)">
+                <ion-icon name="chatbubbles" ></ion-icon>
             </ion-button>
         </div>
     </ion-card>

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Parse } from 'parse';
 import {environment} from "../../environments/environment";
 import {LoadingController} from "@ionic/angular";
+import { ModalController } from '@ionic/angular';
+import {ChatPage} from "./chat/chat.page";
 
 @Component({
   selector: 'app-denuncias-page',
@@ -13,7 +15,7 @@ export class DenunciasPagePage implements OnInit {
   misDenuncias: any[];
   currentUser: any = {};
 
-  constructor(public loadingController: LoadingController) { }
+  constructor(public loadingController: LoadingController, public modalController: ModalController) { }
 
   ngOnInit() {
     this.parseInitialize();
@@ -51,6 +53,14 @@ export class DenunciasPagePage implements OnInit {
     });
   }
 
+  onOpenChat(id: string) {
+    this.modalController.create({
+      component: ChatPage,
+      componentProps: { id: id }
+    }).then((modal) => {
+      modal.present();
+    });
+  }
 
 
 }
