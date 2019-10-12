@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+
+import { environment } from '@env/environment';
+import { Parse } from 'parse';
 
 @Component({
   selector: 'app-root',
@@ -23,4 +25,10 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
+
+  parseInitialize() {
+    Parse.initialize(environment.parse_app_id, environment.parse_js_key);
+    Parse.serverURL = environment.parse_server_url;
+  }
+
 }
