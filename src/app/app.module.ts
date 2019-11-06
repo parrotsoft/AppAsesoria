@@ -1,6 +1,6 @@
-import { RegistroPageModule } from './registro/registro.module';
-import { HomePageModule } from './home/home.module';
-import { HomePage } from './home/home.page';
+import { RegistroPageModule } from './login/registro/registro.module';
+import { HomePageModule } from './login/home/home.module';
+import { HomePage } from './login/home/home.page';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy, RouterModule } from '@angular/router';
@@ -11,9 +11,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { RegistroPage } from './registro/registro.page';
-import { PrincipalPagePageModule } from './principal-page/principal-page.module';
-import { PrincipalPagePage } from './principal-page/principal-page.page';
+import { RegistroPage } from './login/registro/registro.page';
+import { PrincipalPagePageModule } from './pages/principal-page/principal-page.module';
+import { PrincipalPagePage } from './pages/principal-page/principal-page.page';
 import { Facebook } from "@ionic-native/facebook/ngx";
 import { ReactiveFormsModule } from "@angular/forms";
 import { FileChooser } from '@ionic-native/file-chooser/ngx';

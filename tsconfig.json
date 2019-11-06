@@ -16,7 +16,8 @@
     ],
     "paths": {
       "@services/*": ["src/app/services/*"],
-      "@env/*": ["src/environments/*"]
+      "@env/*": ["src/environments/*"],
+      "@assets/*": ["src/assets/*"]
     },
     "lib": [
       "es2018",

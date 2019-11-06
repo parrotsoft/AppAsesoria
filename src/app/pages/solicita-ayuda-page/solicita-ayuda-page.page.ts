@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Parse } from 'parse';
-import {environment} from "../../environments/environment";
+import {environment} from "../../../environments/environment";
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {LoadingController, NavController} from "@ionic/angular";
 import { FileChooser } from '@ionic-native/file-chooser/ngx';

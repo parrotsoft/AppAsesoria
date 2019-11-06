@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Parse } from 'parse';
-import {environment} from "../../environments/environment";
+import {environment} from "../../../environments/environment";
 import {LoadingController} from "@ionic/angular";
 import { ModalController } from '@ionic/angular';
 import {ChatPage} from "./chat/chat.page";

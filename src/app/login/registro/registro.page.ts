@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Parse } from 'parse';
-import {environment} from "../../environments/environment";
+import {environment} from "../../../environments/environment";
 import {LoadingController, NavController} from '@ionic/angular';
 
 @Component({
