@@ -2,12 +2,18 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'main', loadChildren: 'helpers/tabs/tabs.module#TabsPageModule' },
-  { path: 'denuncias-page', loadChildren: './denuncias-page/denuncias-page.module#DenunciasPagePageModule' },
-  { path: 'foros-page', loadChildren: './foros-page/foros-page.module#ForosPagePageModule' },
-  { path: 'principal-page', loadChildren: './principal-page/principal-page.module#PrincipalPagePageModule' },
-  { path: 'solicita-ayuda-page/:id', loadChildren: './solicita-ayuda-page/solicita-ayuda-page.module#SolicitaAyudaPagePageModule' },
-  { path: 'educativo-page', loadChildren: './educativo-page/educativo-page.module#EducativoPagePageModule' },
+  { path: 'main',
+  loadChildren: () => import('./helpers/helpers.module').then(m => m.HelpersModule) },
+  { path: 'denuncias-page',
+  loadChildren: () => import('./pages/denuncias-page/denuncias-page.module').then(m => m.DenunciasPagePageModule) },
+  { path: 'foros-page',
+  loadChildren: () => import('./pages/foros-page/foros-page.module').then(m => m.ForosPagePageModule) },
+  { path: 'principal-page',
+  loadChildren: () => import('./pages/principal-page/principal-page.module').then(m => m.PrincipalPagePageModule) },
+  { path: 'solicita-ayuda-page/:id',
+  loadChildren: () => import('./pages/solicita-ayuda-page/solicita-ayuda-page.module').then(m => m.SolicitaAyudaPagePageModule) },
+  { path: 'educativo-page',
+  loadChildren: () => import('./pages/educativo-page/educativo-page.module').then(m => m.EducativoPagePageModule) },
   // { path: 'chat', loadChildren: './denuncias-page/chat/chat.module#ChatPageModule' }
 ];
 
